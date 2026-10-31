@@ -244,6 +244,27 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   background: var(--grad); background-size: 200% auto; animation: shine 6s linear infinite;
   color: #fff; font-weight: 600; font-size: .9rem;
 }
+.lang { position: relative; }
+.lang__menu {
+  position: absolute; top: calc(100% + 10px); inset-inline-end: 0; z-index: 2;
+  display: grid; gap: 2px; min-width: 150px; padding: 6px;
+  border-radius: 16px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-hi);
+  backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
+  box-shadow: var(--shadow);
+  animation: swap .3s var(--ease);
+}
+.lang__menu[hidden] { display: none; }
+.lang__menu button {
+  padding: 10px 14px; border-radius: 10px;
+  text-align: start; font-weight: 600; font-size: .92rem; color: var(--text);
+  transition: background-color .2s, color .2s;
+}
+.lang__menu button:hover { background: var(--glass); color: var(--c1); }
+.lang__menu button[aria-checked="true"] { background: var(--grad); color: #fff; }
+.lang__menu button[data-lang="ar"] { font-family: var(--font-ar); }
+
 #themeToggle .icon--sun { display: none; }
 [data-theme="dark"] #themeToggle .icon--sun { display: block; }
 [data-theme="dark"] #themeToggle .icon--moon { display: none; }
@@ -277,7 +298,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
 /* 3D sphere */
-.sphere-wrap { position: relative; aspect-ratio: 1; width: 100%; max-width: 520px; margin-inline: auto; touch-action: pan-y; cursor: grab; user-select: none; }
+.sphere-wrap { position: relative; isolation: isolate; aspect-ratio: 1; width: 100%; max-width: 520px; margin-inline: auto; touch-action: pan-y; cursor: grab; user-select: none; }
 .sphere-wrap.is-dragging { cursor: grabbing; }
 .sphere-wrap::before {
   content: ''; position: absolute; inset: 12%;

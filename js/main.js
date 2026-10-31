@@ -9,7 +9,9 @@
   var config = window.SITE_CONFIG || {};
   var data = window.SITE_DATA || {};
   var dict = window.I18N || {};
-  var lang = root.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+  var LANGS = ['en', 'ar', 'tr'];
+  var LANG_LABELS = { en: 'EN', ar: 'ع', tr: 'TR' };
+  var lang = LANGS.indexOf(root.getAttribute('lang')) > -1 ? root.getAttribute('lang') : 'en';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
@@ -248,7 +250,10 @@
     $$('[data-i18n-aria]').forEach(function (el) {
       el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
     });
-    $('#langLabel').textContent = lang === 'ar' ? 'EN' : 'ع';
+    $('#langLabel').textContent = LANG_LABELS[lang];
+    $$('[data-lang]').forEach(function (b) {
+      b.setAttribute('aria-checked', String(b.getAttribute('data-lang') === lang));
+    });
 
     renderMarquee();
     renderServices();
@@ -263,10 +268,34 @@
     updateScroll();
   }
 
-  $('#langToggle').addEventListener('click', function () {
-    var next = lang === 'ar' ? 'en' : 'ar';
+  var langToggle = $('#langToggle');
+  var langMenu = $('#langMenu');
+
+  function setLangMenu(open) {
+    langMenu.hidden = !open;
+    langToggle.setAttribute('aria-expanded', String(open));
+  }
+
+  langToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setLangMenu(langMenu.hidden);
+  });
+
+  langMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-lang]');
+    if (!btn) return;
+    var next = btn.getAttribute('data-lang');
+    setLangMenu(false);
+    if (next === lang) return;
     store('lang', next);
     applyLanguage(next);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!langMenu.hidden && !e.target.closest('.lang')) setLangMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setLangMenu(false);
   });
 
   function setThemeColor() {

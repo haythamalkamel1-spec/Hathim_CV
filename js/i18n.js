@@ -161,5 +161,85 @@ window.I18N = {
 
     'footer.name': 'هيثم الكامل',
     'footer.made': 'صُمّم وبُرمج بعناية.'
+  },
+
+  tr: {
+    'meta.title': 'Haitham Al-Kamel | Yazılım Geliştirici',
+
+    'dock.status': 'Yeni fırsatlara açığım',
+    'dock.cta': 'İletişime geç',
+
+    'aria.lang': 'Dili değiştir',
+    'aria.theme': 'Açık / koyu tema',
+    'aria.sphere': 'Etkileşimli yetenek küresi — döndürmek için sürükleyin',
+    'aria.top': 'Başa dön',
+    'aria.whatsapp': 'WhatsApp üzerinden yazın',
+
+    'hero.hello': 'Merhaba, ben',
+    'hero.first': 'Haitham',
+    'hero.last': 'Al‑Kamel',
+    'hero.rolePrefix': 'Geliştirdiklerim:',
+    'hero.typed': ['modern web siteleri.', 'web tabanlı sistemler.', 'veri odaklı çözümler.', 'temiz, ölçeklenebilir yazılımlar.'],
+    'hero.lead': "İstanbul'da yaşayan bir Yazılım Geliştirici ve Yazılım Mühendisliği öğrencisiyim. Temiz, hızlı ve büyümeye hazır modern web siteleri, web tabanlı sistemler ve veri çözümleri tasarlayıp geliştiriyorum.",
+    'hero.ctaWork': 'Dünyamı keşfet',
+    'hero.ctaCv': 'CV İndir',
+    'hero.sphereHint': 'Döndürmek için sürükle',
+
+    'me.title': 'Ben kimim',
+    'me.introLabel': 'Kısaca',
+    'me.p1': 'Fikirleri temiz ve güvenilir dijital çözümlere dönüştüren bir Yazılım Geliştiriciyim — web siteleri, web tabanlı sistemler ve düzenli veriler.',
+    'me.p2': 'Programlamanın yanı sıra veri ve hesap yönetimi, idari işler ve organizasyon ile Microsoft Excel konusunda pratik yetkinliklere sahibim. Problemleri parçalara ayırır, gerçek ihtiyacı anlar ve kullanımı kolay, bakımı basit çözümler sunarım.',
+
+    'info.locationLabel': 'Konum',
+    'info.location': 'İstanbul, Türkiye',
+    'info.universityLabel': 'Üniversite',
+    'info.university': 'Nişantaşı Üniversitesi',
+    'info.major': 'Yazılım Mühendisliği',
+    'info.roleLabel': 'Unvan',
+    'info.role': 'Yazılım Geliştirici',
+    'info.langsLabel': 'Çalıştığım diller',
+
+    'skills.title': 'Yetenek evrenim',
+    'skills.sub': 'Her yeteneği keşfetmek için bir gezegene dokunun.',
+    'skills.sun': 'Yetenekler',
+
+    'services.title': 'Sizin için neler yapabilirim',
+
+    'projects.title': 'Seçilmiş çalışmalar',
+    'projects.sub': 'Yalnızca gerçek projeler — yeni işler tamamlandıkça bu alan büyüyor.',
+    'projects.live': 'Canlı demo',
+    'projects.code': 'Kaynak kod',
+    'projects.soonTitle': 'Sıradaki proje yükleniyor…',
+    'projects.soonText': 'Yeni çalışmalar devam ediyor ve tamamlandığında burada yer alacak.',
+    'projects.soonCta': 'Benimle bir proje başlat',
+
+    'journey.title': 'Yolculuğum',
+    'journey.education': 'Eğitim',
+    'journey.experience': 'Deneyim',
+
+    'contact.title1': 'Bir fikrin mi var?',
+    'contact.title2': 'Hadi hayata geçirelim.',
+    'contact.sub': 'Bir projeniz, fikriniz ya da fırsatınız mı var? Bana mesaj gönderin, size dönüş yapayım.',
+    'contact.emailLabel': 'E-posta — kopyalamak için tıklayın',
+    'contact.copied': 'E-posta panoya kopyalandı ✓',
+    'contact.whatsappLabel': 'WhatsApp — bana yazın',
+    'contact.whatsappMessage': 'Merhaba Haitham, web sitenizi ziyaret ettim ve sizinle iletişime geçmek istiyorum.',
+
+    'form.name': 'Ad Soyad',
+    'form.email': 'E-posta',
+    'form.subject': 'Konu',
+    'form.message': 'Mesajınız',
+    'form.send': 'Mesaj gönder',
+    'form.sending': 'Gönderiliyor…',
+    'form.required': 'Bu alan zorunludur.',
+    'form.invalidEmail': 'Lütfen geçerli bir e-posta girin.',
+    'form.success': 'Teşekkürler! Mesajınız gönderildi.',
+    'form.mailto': 'E-posta uygulamanız mesaj hazır şekilde açıldı.',
+    'form.error': 'Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.',
+
+    'cv.missing': 'CV yakında indirilebilir olacak.',
+
+    'footer.name': 'Haitham Al-Kamel',
+    'footer.made': 'özenle tasarlandı ve kodlandı.'
   }
 };

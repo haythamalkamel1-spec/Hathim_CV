@@ -15,6 +15,7 @@
   <meta property="og:description" content="Software Developer based in Istanbul — websites, web systems and data solutions." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="ar_AR" />
+  <meta property="og:locale:alternate" content="tr_TR" />
   <meta name="twitter:card" content="summary" />
 
   <script type="application/ld+json">
@@ -37,8 +38,8 @@
         var root = document.documentElement;
         var theme = localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        var lang = localStorage.getItem('lang') ||
-          ((navigator.language || '').toLowerCase().indexOf('ar') === 0 ? 'ar' : 'en');
+        var nav = (navigator.language || '').toLowerCase().slice(0, 2);
+        var lang = localStorage.getItem('lang') || (nav === 'ar' || nav === 'tr' ? nav : 'en');
         root.setAttribute('data-theme', theme);
         root.setAttribute('lang', lang);
         root.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
@@ -106,9 +107,16 @@
     </a>
     <span class="dock__status"><span class="pulse-dot"></span><span data-i18n="dock.status">Open to opportunities</span></span>
     <div class="dock__actions">
-      <button class="dock__btn" id="langToggle" type="button" data-i18n-aria="aria.lang">
-        <svg class="icon"><use href="#i-globe"/></svg><span id="langLabel">ع</span>
-      </button>
+      <div class="lang">
+        <button class="dock__btn" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" data-i18n-aria="aria.lang">
+          <svg class="icon"><use href="#i-globe"/></svg><span id="langLabel">EN</span>
+        </button>
+        <div class="lang__menu" id="langMenu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-lang="en">English</button>
+          <button type="button" role="menuitemradio" data-lang="ar">العربية</button>
+          <button type="button" role="menuitemradio" data-lang="tr">Türkçe</button>
+        </div>
+      </div>
       <button class="dock__btn" id="themeToggle" type="button" data-i18n-aria="aria.theme">
         <svg class="icon icon--sun"><use href="#i-sun"/></svg>
         <svg class="icon icon--moon"><use href="#i-moon"/></svg>
@@ -198,7 +206,7 @@
 
           <article class="glass bento__langs spotlight reveal">
             <span class="glass__label" data-i18n="info.langsLabel">Works in</span>
-            <div class="langs"><span class="langs__item">العربية</span><span class="langs__item">English</span></div>
+            <div class="langs"><span class="langs__item">العربية</span><span class="langs__item">English</span><span class="langs__item">Türkçe</span></div>
           </article>
         </div>
       </div>
