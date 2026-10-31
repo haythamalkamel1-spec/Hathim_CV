@@ -21,13 +21,6 @@ window.SITE_DATA = {
     tr: ['Web Tasarımı', 'Web Geliştirme', 'Elektronik Sistemler', 'Microsoft Excel', 'Veri Yönetimi', 'Problem Çözme', 'Organizasyon']
   },
 
-  // Spoken languages: `value` is the bar fill (0–100)
-  languages: [
-    { name: { en: 'Arabic', ar: 'العربية', tr: 'Arapça' }, level: { en: 'Native', ar: 'اللغة الأم', tr: 'Ana dil' }, value: 100 },
-    { name: { en: 'Turkish', ar: 'التركية', tr: 'Türkçe' }, level: { en: 'Excellent', ar: 'ممتاز', tr: 'Mükemmel' }, value: 90 },
-    { name: { en: 'English', ar: 'الإنجليزية', tr: 'İngilizce' }, level: { en: 'Good', ar: 'جيد', tr: 'İyi' }, value: 70 }
-  ],
-
   skills: [
     {
       icon: 'layout',

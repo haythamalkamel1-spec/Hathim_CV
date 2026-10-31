@@ -376,7 +376,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 }
 .bento > .glass { padding: 26px; display: flex; flex-direction: column; gap: 10px; }
 .bento { grid-auto-flow: dense; }
-.bento__intro { grid-column: span 2; grid-row: span 4; justify-content: space-between; }
+.bento__intro { grid-column: span 2; grid-row: span 3; justify-content: space-between; }
 .bento__big { font-family: var(--font-display); font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.35; color: var(--heading); font-weight: 600; margin: 10px 0 0; }
 [lang="ar"] .bento__big { font-family: var(--font-ar); line-height: 1.6; }
 .bento__muted { color: var(--muted); font-size: .96rem; margin: 0; }
@@ -414,20 +414,9 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 [data-theme="light"] .code__body .s { color: #059669; }
 .code__body .cur { display: inline-block; width: 8px; height: 1em; vertical-align: -.15em; background: var(--c1); animation: blink 1s steps(1) infinite; }
 
-.langs { display: grid; gap: 16px; margin-top: 6px; }
-.lang-bar__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
-.lang-bar__head strong { font-size: 1.05rem; color: var(--heading); }
-.lang-bar__head span { font-size: .82rem; font-weight: 600; color: var(--c1); }
-.lang-bar__track { height: 9px; border-radius: 999px; background: var(--glass-strong); border: 1px solid var(--glass-border); overflow: hidden; }
-.lang-bar__track i {
-  display: block; height: 100%; width: 0; border-radius: inherit;
-  background: var(--grad); background-size: 200% auto;
-  box-shadow: 0 0 14px rgba(139, 92, 246, .6);
-  transition: width 1.6s var(--ease) .3s;
-  animation: shine 5s linear infinite;
-}
-.bento__langs.is-visible .lang-bar__track i { width: var(--v); }
-.bento__langs, .bento__role { grid-column: span 2; }
+.langs { display: flex; flex-direction: column; gap: 8px; }
+.langs__item { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--heading); }
+.langs__item:first-child { font-family: var(--font-ar); }
 
 /* Skills orbit */
 .orbit-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
