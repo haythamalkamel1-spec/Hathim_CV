@@ -322,17 +322,29 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   transition: border-color .3s, color .3s;
 }
 .sphere__item:hover { border-color: var(--c1); color: var(--c1); }
+/* Profile photo at the centre of the sphere, framed by a spinning gradient ring.
+   z-index 100 sits between back words (<100) and front words (>100). */
 .sphere__core {
-  position: absolute; top: 50%; left: 50%;
-  width: 96px; height: 96px; margin: -48px 0 0 -48px;
-  display: grid; place-items: center;
+  position: absolute; top: 50%; left: 50%; z-index: 100;
+  width: 190px; height: 190px; margin: -95px 0 0 -95px;
   border-radius: 50%;
-  background: var(--grad); background-size: 200% auto; animation: shine 6s linear infinite;
-  box-shadow: 0 0 60px rgba(139, 92, 246, .7), inset 0 0 20px rgba(255, 255, 255, .3);
-  color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem;
+  padding: 4px;
+  box-shadow: 0 0 60px rgba(139, 92, 246, .65), 0 0 120px rgba(34, 211, 238, .25);
   pointer-events: none;
 }
-.sphere__core::after { content: ''; position: absolute; inset: -14px; border-radius: 50%; border: 1px dashed rgba(255, 255, 255, .25); animation: spin 20s linear infinite; }
+.sphere__core::before {
+  content: ''; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c1));
+  animation: spin 6s linear infinite;
+}
+.sphere__core::after { content: ''; position: absolute; inset: -14px; border-radius: 50%; border: 1px dashed var(--glass-hi); animation: spin 20s linear infinite reverse; }
+.sphere__core img {
+  position: relative; display: block;
+  width: 100%; height: 100%; border-radius: 50%;
+  object-fit: cover; object-position: center 30%;
+  background: #fff;
+  border: 3px solid var(--bg);
+}
 .sphere__hint { position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); display: inline-flex; gap: 6px; align-items: center; margin: 0; font-size: .8rem; color: var(--muted); white-space: nowrap; }
 
 /* ---------- Marquee ---------- */
@@ -747,6 +759,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .block__index { transform: none; }
   .bento, .services, .form__row { grid-template-columns: 1fr; }
   .bento__intro, .bento__code { grid-column: auto; grid-row: auto; }
+  .sphere__core { width: 120px; height: 120px; margin: -60px 0 0 -60px; }
   .planet { width: 46px; height: 46px; margin: -23px; }
   .planet__btn { font-size: 1.1rem; }
   .skill-panel { padding: 24px; min-height: 0; }
