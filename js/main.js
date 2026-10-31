@@ -134,6 +134,16 @@
     list.insertAdjacentHTML('beforeend', html);
   }
 
+  function renderLanguages() {
+    var box = $('#langBars');
+    if (!box) return;
+    box.innerHTML = (data.languages || []).map(function (l) {
+      return '<div class="lang-bar">' +
+        '<div class="lang-bar__head"><strong>' + escapeHtml(L(l.name)) + '</strong><span>' + escapeHtml(L(l.level)) + '</span></div>' +
+        '<div class="lang-bar__track"><i style="--v:' + Number(l.value) + '%"></i></div></div>';
+    }).join('');
+  }
+
   function renderContactInfo() {
     var pill = $('#copyEmail');
     if (config.email) $('#emailText').textContent = config.email; else pill.hidden = true;
@@ -259,6 +269,7 @@
     renderServices();
     renderProjects();
     renderJourney();
+    renderLanguages();
     renderContactInfo();
     renderOrbit();
     buildSphere();
