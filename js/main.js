@@ -184,7 +184,7 @@
         var angle = (360 / list.length) * i + (offset ? 30 : -90);
         var index = skills.indexOf(s);
         return '<div class="planet" style="--a:' + angle + 'deg">' +
-          '<button type="button" class="planet__btn" data-skill="' + index + '" aria-label="' + escapeHtml(L(s.name)) + '">' + icon(s.icon) + '</button></div>';
+          '<button type="button" class="planet__btn" data-skill="' + index + '" data-name="' + escapeHtml(L(s.name)) + '" aria-label="' + escapeHtml(L(s.name)) + '">' + icon(s.icon) + '</button></div>';
       }).join('');
     }
 
@@ -235,6 +235,9 @@
       if (!userPickedSkill) showSkill(activeSkill + 1, true);
     }, 4500);
   }
+
+  // On touch screens, stop the orbit as soon as it is touched so planets are easy to tap
+  $('#orbit').addEventListener('pointerdown', function () { $('#orbit').classList.add('is-paused'); });
 
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-skill]');
