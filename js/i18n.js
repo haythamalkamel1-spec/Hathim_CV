@@ -36,7 +36,7 @@ window.I18N = {
     'info.major': 'Software Engineering',
     'info.roleLabel': 'Role',
     'info.role': 'Software Developer',
-    'info.langsLabel': 'Works in',
+    'info.langsLabel': 'Languages',
 
     'skills.title': 'My skill universe',
     'skills.sub': 'Tap a planet to explore each skill.',
@@ -116,7 +116,7 @@ window.I18N = {
     'info.major': 'هندسة البرمجيات',
     'info.roleLabel': 'المسمى المهني',
     'info.role': 'مطوّر برمجيات',
-    'info.langsLabel': 'أعمل باللغتين',
+    'info.langsLabel': 'أتحدث ثلاث لغات',
 
     'skills.title': 'كون مهاراتي',
     'skills.sub': 'اضغط على أي كوكب لاستكشاف المهارة.',
@@ -197,7 +197,7 @@ window.I18N = {
     'info.major': 'Yazılım Mühendisliği',
     'info.roleLabel': 'Unvan',
     'info.role': 'Yazılım Geliştirici',
-    'info.langsLabel': 'Çalıştığım diller',
+    'info.langsLabel': 'Konuştuğum diller',
 
     'skills.title': 'Yetenek evrenim',
     'skills.sub': 'Her yeteneği keşfetmek için bir gezegene dokunun.',
