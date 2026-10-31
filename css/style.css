@@ -436,7 +436,9 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 }
 [lang="ar"] .orbit__sun { font-family: var(--font-ar); }
 @keyframes breathe { 50% { box-shadow: 0 0 110px rgba(59, 130, 246, .9), 0 0 200px rgba(236, 72, 153, .35); } }
-.orbit__track { position: absolute; inset: 0; animation: spin 40s linear infinite; }
+/* Tracks overlap (the outer one covers the inner), so only the planets take clicks */
+.orbit__track { position: absolute; inset: 0; animation: spin 40s linear infinite; pointer-events: none; }
+.planet { pointer-events: auto; }
 .orbit__track--1 { inset: 22%; animation-duration: 28s; }
 .orbit__track--2 { inset: 4%; animation-direction: reverse; animation-duration: 46s; }
 .orbit:hover .orbit__track, .orbit.is-paused .orbit__track { animation-play-state: paused; }
