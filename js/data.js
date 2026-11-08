@@ -7,18 +7,18 @@ window.SITE_DATA = {
   // Words floating on the interactive 3D sphere in the hero
   sphere: {
     en: ['HTML', 'CSS', 'JavaScript', 'Excel', 'UI / UX', 'Web Systems', 'Data', 'Responsive', 'SEO', 'Logic',
-      'Software Eng.', 'Problem Solving', 'Organization', 'Accounts', 'Automation', 'Clean Code', 'Analysis', 'Design'],
+      'Software Eng.', 'Problem Solving', 'Organization', 'Accounts', 'Automation', 'Clean Code', 'Analysis', 'Design', 'Video Editing'],
     ar: ['HTML', 'CSS', 'JavaScript', 'Excel', 'UI / UX', 'أنظمة ويب', 'البيانات', 'تصميم متجاوب', 'SEO', 'المنطق',
-      'هندسة البرمجيات', 'حل المشكلات', 'التنظيم', 'الحسابات', 'الأتمتة', 'كود نظيف', 'التحليل', 'التصميم'],
+      'هندسة البرمجيات', 'حل المشكلات', 'التنظيم', 'الحسابات', 'الأتمتة', 'كود نظيف', 'التحليل', 'التصميم', 'المونتاج'],
     tr: ['HTML', 'CSS', 'JavaScript', 'Excel', 'UI / UX', 'Web Sistemleri', 'Veri', 'Duyarlı Tasarım', 'SEO', 'Mantık',
-      'Yazılım Müh.', 'Problem Çözme', 'Organizasyon', 'Hesaplar', 'Otomasyon', 'Temiz Kod', 'Analiz', 'Tasarım']
+      'Yazılım Müh.', 'Problem Çözme', 'Organizasyon', 'Hesaplar', 'Otomasyon', 'Temiz Kod', 'Analiz', 'Tasarım', 'Video Kurgu']
   },
 
   // Words in the scrolling gradient band
   marquee: {
-    en: ['Web Design', 'Web Development', 'Electronic Systems', 'Microsoft Excel', 'Data Management', 'Problem Solving', 'Organization'],
-    ar: ['تصميم المواقع', 'تطوير المواقع', 'الأنظمة الإلكترونية', 'Microsoft Excel', 'إدارة البيانات', 'حل المشكلات', 'التنظيم'],
-    tr: ['Web Tasarımı', 'Web Geliştirme', 'Elektronik Sistemler', 'Microsoft Excel', 'Veri Yönetimi', 'Problem Çözme', 'Organizasyon']
+    en: ['Web Design', 'Web Development', 'Electronic Systems', 'Microsoft Excel', 'Data Management', 'Video Editing', 'Problem Solving', 'Organization'],
+    ar: ['تصميم المواقع', 'تطوير المواقع', 'الأنظمة الإلكترونية', 'Microsoft Excel', 'إدارة البيانات', 'مونتاج الفيديو', 'حل المشكلات', 'التنظيم'],
+    tr: ['Web Tasarımı', 'Web Geliştirme', 'Elektronik Sistemler', 'Microsoft Excel', 'Veri Yönetimi', 'Video Kurgu', 'Problem Çözme', 'Organizasyon']
   },
 
   // Spoken languages: `value` is the bar fill (0–100)
@@ -88,6 +88,16 @@ window.SITE_DATA = {
         tr: 'Problemleri analiz etme, adımlara bölme ve pratik, verimli çözümler bulma.'
       },
       tags: [{ en: 'Analysis', ar: 'التحليل', tr: 'Analiz' }, { en: 'Logic', ar: 'المنطق', tr: 'Mantık' }]
+    },
+    {
+      icon: 'video',
+      name: { en: 'Video Editing', ar: 'مونتاج الفيديو', tr: 'Video Kurgu' },
+      desc: {
+        en: 'Editing and producing videos: cutting, arranging clips, adding text, music and transitions to deliver clear, engaging content.',
+        ar: 'مونتاج الفيديوهات وإنتاجها: القص وترتيب المقاطع وإضافة النصوص والموسيقى والانتقالات لتقديم محتوى واضح وجذاب.',
+        tr: 'Video kurgu ve üretimi: kesme, klipleri düzenleme, yazı, müzik ve geçiş ekleyerek net ve ilgi çekici içerik hazırlama.'
+      },
+      tags: [{ en: 'Editing', ar: 'المونتاج', tr: 'Kurgu' }, { en: 'Transitions', ar: 'الانتقالات', tr: 'Geçişler' }, { en: 'Content', ar: 'صناعة المحتوى', tr: 'İçerik' }]
     },
     {
       icon: 'terminal',
