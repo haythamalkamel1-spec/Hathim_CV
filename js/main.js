@@ -102,6 +102,21 @@
         '<div class="project__links">' + links + '</div>' +
       '</article>';
     });
+
+    // Upcoming-work card, numbered after the real projects
+    var next = cards.length + 1;
+    cards.push(
+      '<article class="glass proj-card proj-card--soon spotlight reveal" style="--delay:' + (cards.length % 2) * 0.1 + 's">' +
+        '<div class="proj-card__head">' +
+          '<span class="proj-card__icon proj-card__icon--soon"><span class="loader" aria-hidden="true"><span></span><span></span><span></span></span></span>' +
+          '<span class="proj-card__num">' + (next < 10 ? '0' : '') + next + '</span>' +
+        '</div>' +
+        '<span class="proj-card__type">' + t('projects.soonType') + '</span>' +
+        '<h3>' + t('projects.soonTitle') + '</h3>' +
+        '<p>' + t('projects.soonText') + '</p>' +
+        '<div class="project__links"><a class="link-btn" href="#contact">' + t('projects.soonCta') + icon('arrow', 'flip-rtl') + '</a></div>' +
+      '</article>'
+    );
     $('#projectsGrid').innerHTML = cards.join('');
   }
 

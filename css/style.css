@@ -834,3 +834,12 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; filter: none; }
 }
+
+/* Upcoming-projects card */
+.proj-card--soon { grid-column: 1 / -1; border-style: dashed; border-color: var(--glass-hi); }
+.proj-card--soon::after { opacity: .35; }
+.proj-card__icon--soon { background: var(--glass-strong); border: 1px solid var(--glass-hi); box-shadow: none; }
+.proj-card__icon--soon .loader { position: relative; width: 34px; height: 34px; }
+.proj-card__icon--soon .loader span { position: absolute; inset: 0; border-radius: 50%; border: 2px solid transparent; border-top-color: var(--c1); animation: spin 1.6s linear infinite; }
+.proj-card__icon--soon .loader span:nth-child(2) { inset: 5px; border-top-color: var(--c3); animation-duration: 2.2s; animation-direction: reverse; }
+.proj-card__icon--soon .loader span:nth-child(3) { inset: 10px; border-top-color: var(--c4); animation-duration: 1.2s; }
