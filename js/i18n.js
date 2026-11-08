@@ -45,12 +45,14 @@ window.I18N = {
     'services.title': 'What I can do for you',
 
     'projects.title': 'Selected work',
-    'projects.sub': 'Real projects only — this space grows as new work is completed.',
+    'projects.sub': 'Real projects I have built — private ones are shown without code or links.',
     'projects.live': 'Live demo',
     'projects.code': 'Source code',
     'projects.soonTitle': 'Next project loading…',
     'projects.soonText': 'New work is in progress and will appear here once it is complete.',
     'projects.soonCta': 'Start a project with me',
+    'projects.private': 'Private project',
+    'projects.privateNote': 'This is a private project — the code and demo are not public.',
 
     'journey.title': 'The journey',
     'journey.education': 'Education',
@@ -125,12 +127,14 @@ window.I18N = {
     'services.title': 'ماذا أقدّم لك',
 
     'projects.title': 'مشاريعي وأعمالي',
-    'projects.sub': 'مشاريع حقيقية فقط، وتُضاف الأعمال الجديدة هنا عند اكتمالها.',
+    'projects.sub': 'مشاريع حقيقية بنيتها، والمشاريع الخاصة تُعرض بدون كود أو روابط.',
     'projects.live': 'معاينة مباشرة',
     'projects.code': 'الكود المصدري',
     'projects.soonTitle': 'المشروع القادم قيد التحميل…',
     'projects.soonText': 'أعمل حاليًا على مشاريع جديدة، وستظهر هنا فور اكتمالها.',
     'projects.soonCta': 'ابدأ مشروعك معي',
+    'projects.private': 'مشروع خاص',
+    'projects.privateNote': 'هذا مشروع خاص، الكود والمعاينة غير متاحة للعامة.',
 
     'journey.title': 'رحلتي',
     'journey.education': 'التعليم',
@@ -206,12 +210,14 @@ window.I18N = {
     'services.title': 'Sizin için neler yapabilirim',
 
     'projects.title': 'Seçilmiş çalışmalar',
-    'projects.sub': 'Yalnızca gerçek projeler — yeni işler tamamlandıkça bu alan büyüyor.',
+    'projects.sub': 'Geliştirdiğim gerçek projeler — özel olanlar kod veya bağlantı olmadan gösterilir.',
     'projects.live': 'Canlı demo',
     'projects.code': 'Kaynak kod',
     'projects.soonTitle': 'Sıradaki proje yükleniyor…',
     'projects.soonText': 'Yeni çalışmalar devam ediyor ve tamamlandığında burada yer alacak.',
     'projects.soonCta': 'Benimle bir proje başlat',
+    'projects.private': 'Özel proje',
+    'projects.privateNote': 'Bu özel bir proje — kod ve demo herkese açık değil.',
 
     'journey.title': 'Yolculuğum',
     'journey.education': 'Eğitim',

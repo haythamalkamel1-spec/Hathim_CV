@@ -81,32 +81,27 @@
   }
 
   function renderProjects() {
-    var cards = (data.projects || []).map(function (p) {
-      var media = p.image
-        ? '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(L(p.title)) + '" loading="lazy" />'
-        : '<div class="project__mock" aria-hidden="true"><div class="project__mock-bar"><i></i><i></i><i></i></div>' +
-          '<div class="project__mock-body"><span></span><span></span><span></span></div></div>';
+    var cards = (data.projects || []).map(function (p, i) {
       var links = '';
-      if (p.live) links += '<a class="link-btn" href="' + escapeHtml(p.live) + '" target="_blank" rel="noopener">' + icon('external') + t('projects.live') + '</a>';
-      if (p.code) links += '<a class="link-btn" href="' + escapeHtml(p.code) + '" target="_blank" rel="noopener">' + icon('github') + t('projects.code') + '</a>';
-      return '<article class="glass project spotlight tilt reveal">' +
-        '<div class="project__media">' + media +
-          (p.status ? '<span class="project__badge">' + escapeHtml(L(p.status)) + '</span>' : '') + '</div>' +
-        '<div class="project__body"><h3>' + escapeHtml(L(p.title)) + '</h3>' +
-          '<p>' + escapeHtml(L(p.desc)) + '</p>' +
-          '<div class="tags">' + tagsHtml(p.tags) + '</div>' +
-          (links ? '<div class="project__links">' + links + '</div>' : '') +
-        '</div></article>';
+      if (p.private) {
+        links = '<button type="button" class="lock-pill js-private">' + icon('lock') + t('projects.private') + '</button>';
+      } else {
+        if (p.live) links += '<a class="link-btn" href="' + escapeHtml(p.live) + '" target="_blank" rel="noopener">' + icon('external') + t('projects.live') + '</a>';
+        if (p.code) links += '<a class="link-btn" href="' + escapeHtml(p.code) + '" target="_blank" rel="noopener">' + icon('github') + t('projects.code') + '</a>';
+      }
+      return '<article class="glass proj-card spotlight tilt reveal" style="--delay:' + (i % 2) * 0.1 + 's">' +
+        '<svg class="icon proj-card__ghost" aria-hidden="true"><use href="#i-' + (p.icon || 'code') + '"/></svg>' +
+        '<div class="proj-card__head">' +
+          '<span class="proj-card__icon">' + icon(p.icon || 'code') + '</span>' +
+          '<span class="proj-card__num">' + (i + 1 < 10 ? '0' : '') + (i + 1) + '</span>' +
+        '</div>' +
+        (p.type ? '<span class="proj-card__type">' + escapeHtml(L(p.type)) + '</span>' : '') +
+        '<h3>' + escapeHtml(L(p.title)) + '</h3>' +
+        '<p>' + escapeHtml(L(p.desc)) + '</p>' +
+        '<div class="tags">' + tagsHtml(p.tags) + '</div>' +
+        '<div class="project__links">' + links + '</div>' +
+      '</article>';
     });
-
-    cards.push(
-      '<article class="glass project project--soon reveal" style="--delay:.15s">' +
-        '<div class="loader" aria-hidden="true"><span></span><span></span><span></span></div>' +
-        '<h3>' + t('projects.soonTitle') + '</h3>' +
-        '<p>' + t('projects.soonText') + '</p>' +
-        '<a class="link-btn" href="#contact">' + t('projects.soonCta') + icon('arrow', 'flip-rtl') + '</a>' +
-      '</article>'
-    );
     $('#projectsGrid').innerHTML = cards.join('');
   }
 
@@ -238,6 +233,10 @@
 
   // On touch screens, stop the orbit as soon as it is touched so planets are easy to tap
   $('#orbit').addEventListener('pointerdown', function () { $('#orbit').classList.add('is-paused'); });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.js-private')) toast(t('projects.privateNote'));
+  });
 
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-skill]');

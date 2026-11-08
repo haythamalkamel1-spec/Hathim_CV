@@ -148,10 +148,47 @@ window.SITE_DATA = {
 
   // Only real projects. Add new ones to this list as they are completed.
   // Optional fields: image (path), live (URL), code (URL).
+  // `private: true` shows a locked "Private project" badge instead of links.
   projects: [
     {
+      icon: 'wallet',
+      private: true,
+      type: { en: 'Web app', ar: 'تطبيق ويب', tr: 'Web uygulaması' },
+      title: { en: 'Mizaniyati — Personal Budget', ar: 'ميزانيتي — إدارة الميزانية', tr: 'Mizaniyati — Kişisel Bütçe' },
+      desc: {
+        en: 'Arabic web app for personal expenses and monthly budgets: record income and spending, set a budget per month and see where your money goes in charts.',
+        ar: 'تطبيق ويب عربي لإدارة المصاريف الشخصية والميزانية الشهرية: سجّل دخلك ومصاريفك، حدّد ميزانية لكل شهر، واعرف أين تذهب أموالك عبر رسوم بيانية.',
+        tr: 'Kişisel harcamalar ve aylık bütçe için Arapça web uygulaması: gelir ve giderleri kaydet, her ay için bütçe belirle ve paranın nereye gittiğini grafiklerle gör.'
+      },
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Recharts']
+    },
+    {
+      icon: 'calendar',
+      private: true,
+      type: { en: 'System', ar: 'نظام', tr: 'Sistem' },
+      title: { en: 'Hajozati — Booking System', ar: 'حجوزاتي — نظام الحجوزات', tr: 'Hajozati — Rezervasyon Sistemi' },
+      desc: {
+        en: 'Booking and appointment system for small businesses, starting with salons: customers pick a service, staff member and time slot; owners manage everything from one dashboard.',
+        ar: 'نظام حجوزات ومواعيد للأعمال الصغيرة، يبدأ بالصالونات: يختار العميل الخدمة والموظف والوقت المتاح، ويدير صاحب النشاط كل شيء من لوحة واحدة.',
+        tr: 'Küçük işletmeler için randevu sistemi, kuaförlerle başlıyor: müşteri hizmeti, personeli ve saati seçer; işletme sahibi her şeyi tek panelden yönetir.'
+      },
+      tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Zod']
+    },
+    {
+      icon: 'file',
+      private: true,
+      type: { en: 'Web app', ar: 'تطبيق ويب', tr: 'Web uygulaması' },
+      title: { en: 'Seerati — CV Builder', ar: 'سيرتي — منشئ السيرة الذاتية', tr: 'Seerati — CV Oluşturucu' },
+      desc: {
+        en: 'CV builder with an Arabic interface: fill a simple form, watch the CV update live in Arabic or English, then export it as a ready PDF.',
+        ar: 'منشئ سير ذاتية بواجهة عربية: يملأ المستخدم نموذجًا بسيطًا، ويشاهد سيرته تتحدث مباشرة بالعربية أو الإنجليزية، ثم يحمّلها PDF جاهزة.',
+        tr: 'Arapça arayüzlü CV oluşturucu: basit bir formu doldur, CV’nin Arapça veya İngilizce olarak anında güncellendiğini gör ve hazır PDF olarak indir.'
+      },
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PDF']
+    },
+    {
       icon: 'code',
-      status: { en: 'Live', ar: 'مكتمل', tr: 'Yayında' },
+      type: { en: 'Website', ar: 'موقع', tr: 'Web sitesi' },
       title: { en: 'Personal Portfolio Website', ar: 'الموقع الشخصي (Portfolio)', tr: 'Kişisel Portfolyo Web Sitesi' },
       desc: {
         en: 'This website: a fast, multilingual (English/Arabic/Turkish) portfolio with light & dark themes, interactive 3D graphics, smooth animations, a working contact form and SEO optimization — built with clean, modular code.',
